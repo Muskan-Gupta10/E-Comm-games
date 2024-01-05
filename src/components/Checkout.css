@@ -4,10 +4,11 @@ table,th,tr,td{
     padding:5px;
     background-color: rgb(114, 145, 152);
 }
+
 #cart{
     width:1200px;
     margin-left: 30vh;
-
+    
     text-align:center
 }
 .details{
@@ -17,6 +18,11 @@ table,th,tr,td{
     background-image: url('../assets/bg4.webp');
     
 }
-#container{
+#checkout_container{
     background-image: url('../assets/bg5.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    margin-top: 0;
 }

@@ -14,14 +14,14 @@ export default function  Home(){
             fetch('http://localhost:1337/api/racings?populate=*')
             .then((res)=>res.json())
             .then((result)=>{
-                //console.log(result.data)
+               // console.log(typeof(result.data[0].attributes))
                 setRacing(result.data)
             })
 
             fetch('http://localhost:1337/api/actions?populate=*')
             .then((res)=>res.json())
             .then((result)=>{
-                //console.log(result.data)
+                console.log(result.data)
                 setAction(result.data)
             })
 
@@ -30,8 +30,10 @@ export default function  Home(){
             .then((result)=>{
                 //console.log(result.data)
                 setSports(result.data)
+                
             })
         },[]
+
     )
 
     return(
@@ -39,7 +41,9 @@ export default function  Home(){
         <br/>
             <h1 className='h1'>Racing</h1>
             <div className='home'>
-            {racing.map((items,index)=>{
+
+            {
+            racing.map((items,index)=>{
                 return  <Card element={items}/>
             })}
             </div>

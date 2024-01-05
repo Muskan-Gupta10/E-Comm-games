@@ -12,18 +12,18 @@ const CartProvider=({children})=>{
   const [cart,setCart]=useState([])
   const [total,setTotal]=useState(0)
   const addToCart=(item,quantity)=>{
-    console.log(item);
+    //console.log(item);
     setTotal(total+item.attributes.Price*quantity)
-    console.log(total,typeof(total),item.attributes.Price);
+    //console.log(total,typeof(total),item.attributes.Price);
     item.attributes.quantity=quantity
     setCart([...cart,item])
-    console.log(cart);
+    //console.log(cart);
   }
   const removeFromCart=(index)=>{
     
     const arr=[...cart]
     const removedItem=arr.splice(index,1)
-    console.log(removedItem);
+    //console.log(removedItem);
      setTotal(total-removedItem[0].attributes.Price*removedItem[0].attributes.quantity)
     setCart(arr)
   }

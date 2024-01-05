@@ -3,9 +3,13 @@
     width:350px;
     border: 2px solid black;
     margin: 20px 0px;
-    background-color: rgb(174, 174, 209);
+    background-color: rgb(174, 174, 209,0.7);
     text-align: center;
-    padding:10px
+    padding:10px;
+    color: rgb(33, 30, 30)
+}
+.card:hover{
+    
 }
 img{
     width:100%;

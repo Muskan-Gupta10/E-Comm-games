@@ -21,7 +21,7 @@ export default function Checkout(){
       pay.open()
     },[Razorpay])
     const{cart,removeFromCart,total}=useContext(cartContext)
-    return(<div id='container'>
+    return(<div id='checkout_container'>
         <div id="cart">
         <table >
         <thead>
@@ -34,14 +34,14 @@ export default function Checkout(){
         
         <tbody>
         {cart.map((item,index)=>{
-            const url = `http://localhost:1337${item.attributes.Image.data[0].attributes.url}`
+            const url = `http://localhost:1337${item.attributes.Image.data.attributes.url}`
     
             return <tr key={index}>
             <td><img height='200px' src={url}/></td>
             <td>{item.attributes.Title}</td>
             <td>{item.attributes.Price}</td>
             <td>{item.attributes.quantity}</td>
-            <td onClick={()=>{removeFromCart(index)}} style={{color:'red'}}>Remove</td></tr>
+            <td onClick={()=>{removeFromCart(index)}} style={{color:'red',cursor:"pointer"}}>Remove</td></tr>
         })}
         </tbody>
         </table>

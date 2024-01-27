@@ -11,21 +11,22 @@ export default function  Home(){
     useEffect(
         ()=>{
         
-            fetch('http://localhost:1337/api/racings?populate=*')
+            // fetch('http://localhost:1337/api/racings?populate=*')
+            fetch('https://e-comm-games-strapi.onrender.com/api/racings?populate=*')
             .then((res)=>res.json())
             .then((result)=>{
                // console.log(typeof(result.data[0].attributes))
                 setRacing(result.data)
             })
 
-            fetch('http://localhost:1337/api/actions?populate=*')
+            fetch('https://e-comm-games-strapi.onrender.com/api/actions?populate=*')
             .then((res)=>res.json())
             .then((result)=>{
                 console.log(result.data)
                 setAction(result.data)
             })
 
-            fetch('http://localhost:1337/api/sports?populate=*')
+            fetch('https://e-comm-games-strapi.onrender.com/api/sports?populate=*')
             .then((res)=>res.json())
             .then((result)=>{
                 //console.log(result.data)

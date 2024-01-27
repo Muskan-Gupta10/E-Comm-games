@@ -8,7 +8,7 @@ export default function  Card( {element}){
     const[toggle,setToggle]=useState(true)
     const {addToCart}=useContext(cartContext)
     const url = `https://e-comm-games-strapi.onrender.com/${element.attributes.Image.data.attributes.url}`
-    
+    console.log(url)
     const [quantity,setQuantity]=useState(1)
     //http://localhost:1337/uploads/FORZA_HORIZON_4e2c3bbab3.png
     return(

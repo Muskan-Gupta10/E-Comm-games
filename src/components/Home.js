@@ -22,7 +22,7 @@ export default function  Home(){
             fetch('https://e-comm-games-strapi.onrender.com/api/actions?populate=*')
             .then((res)=>res.json())
             .then((result)=>{
-                console.log(result.data)
+                //console.log(result.data)
                 setAction(result.data)
             })
 
